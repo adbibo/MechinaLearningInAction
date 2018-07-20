@@ -6,7 +6,7 @@ from pprint import pprint
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-newsgroups_train = fetch_20newsgroups(subset='train')
+newsgroups_train = fetch_20newsgroups(data_home='../scikit_learn_data/', subset='train')
 
 print(newsgroups_train)
 
@@ -18,3 +18,4 @@ newsgroups_train = fetch_20newsgroups(subset='train', categories=categories)
 
 vectorizer = TfidfVectorizer()
 vectors = vectorizer.fit_transform(newsgroups_train.data)
+
